@@ -10,7 +10,11 @@ public class ReajusteService {
 
 	public void reajustarSalario(Funcionario funcionario, Desempenho desempenho) {
 		
-		funcionario.setSalario(funcionario.getSalario().multiply(desempenho.percentualReajuste()).setScale(2, RoundingMode.HALF_UP) );
+		//funcionario.setSalario(funcionario.getSalario().multiply(desempenho.percentualReajuste()).setScale(2, RoundingMode.HALF_UP) );
+		BigDecimal reajuste = funcionario.getSalario().multiply(desempenho.percentualReajuste() );
+		System.out.println("Valor salario = " + funcionario.getSalario());
+		System.out.println("Valor salario = " + reajuste);
+		funcionario.reajustarSalario(reajuste);
 		
 		/*
 		if (desempenho == Desempenho.A_DESEJAR) {

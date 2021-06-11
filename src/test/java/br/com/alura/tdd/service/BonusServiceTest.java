@@ -12,6 +12,9 @@ import br.com.alura.tdd.modelo.Funcionario;
 
 class BonusServiceTest {
 
+	private BonusService bonusService;
+	private BigDecimal bonus;
+
 	@Test
 	@DisplayName("Bonus 0 para salário acima de R$10.000")
 	void bonusZeroParaFuncionarioComSalarioAlto() {
@@ -35,8 +38,8 @@ class BonusServiceTest {
 	@Test
 	@DisplayName("Bonus 10% para salários abaixo de R$10.000")
 	void bonusDe10PorCentoParaFuncionario() {
-		BonusService bonusService = new BonusService();
-		BigDecimal bonus = bonusService.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal("5000")) );
+		bonusService = new BonusService();
+		bonus = bonusService.calcularBonus(new Funcionario("Pedro", LocalDate.now(), new BigDecimal("5000")) );
 		
 		assertEquals(new BigDecimal("500.00"), bonus);
 	}
