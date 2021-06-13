@@ -52,6 +52,7 @@ public class Funcionario {
 	}
 
 
+	//Método privado é utilitário interno da classe, logo, não se testa 
 	private void arredondarSalario() {
 		this.salario = this.salario.setScale(2, RoundingMode.HALF_UP);
 	}
