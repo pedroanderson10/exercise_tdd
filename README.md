@@ -1,4 +1,3 @@
-# exercise_vv_tdd_junit_mockito
- Exercise TDD and Junit (AP1)
- Exercise Mockito (AP2)
+# exercise_vv_tdd_junit
+ Exercise TDD and Junit
  
